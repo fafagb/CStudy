@@ -29,35 +29,33 @@ void BBB(int **p)
 //     return 0;
 // }
 
-void CCC(char** p)
+void CCC(char **p)
 {
 
     char *temp = NULL;
-    temp = (char*) malloc(100);
+    temp = (char *)malloc(100);
     *p = temp;
 }
 
 int main()
 {
 
-    char* p = NULL;
-char  **p1=NULL;
-p=0x11;
-p1=&p;
-*p1=0x22;
+    char *p = NULL;
+    char **p1 = NULL;
+    p = 0x11;
+    p1 = &p;
+    *p1 = 0x22;
     printf("p=%x\n", p);
     CCC(&p);
     printf("p=%x\n", p);
     return 0;
 }
 
-
-
-void DDD(char *p){
-char  * temp=NULL;
-temp=(char*)malloc(100);
-*p=temp;
-
+void DDD(char *p)
+{
+    char *temp = NULL;
+    temp = (char *)malloc(100);
+    *p = temp;
 }
 
 // int main2(){
@@ -71,9 +69,6 @@ temp=(char*)malloc(100);
 // printf("p=%x\n",p);
 // return 0;
 // }
-
-
-
 
 // int main3(){
 
