@@ -37,19 +37,19 @@ void CCC(char **p)
     *p = temp;
 }
 
-int main()
-{
+// int main1()
+// {
 
-    char *p = NULL;
-    char **p1 = NULL;
-    p = 0x11;
-    p1 = &p;
-    *p1 = 0x22;
-    printf("p=%x\n", p);
-    CCC(&p);
-    printf("p=%x\n", p);
-    return 0;
-}
+//     char *p = NULL;
+//     char **p1 = NULL;
+//     p = 0x11;
+//     p1 = &p;
+//     *p1 = 0x22;
+//     printf("p=%x\n", p);
+//     CCC(&p);
+//     printf("p=%x\n", p);
+//     return 0;
+// }
 
 void DDD(char *p)
 {
@@ -58,17 +58,17 @@ void DDD(char *p)
     *p = temp;
 }
 
-// int main2(){
-// char   * p=NULL;
-// char   *p1=NULL;
-// p=0x11;
-// p1=&p;
-// *p1=0x22;
-// printf("p=%x\n",p);
-// DDD(&p);
-// printf("p=%x\n",p);
-// return 0;
-// }
+int main2(){
+char   * p=NULL;
+char   *p1=NULL;
+p=0x11;
+p1=&p;
+*p1=0x22;
+printf("p=%x\n",p);
+DDD(&p);
+printf("p=%x\n",p);
+return 0;
+}
 
 // int main3(){
 
