@@ -27,7 +27,7 @@ SList *Create_List()
     scanf("%d", &data);
     while (data != -1)
     {
-        pM = (char *)malloc(sizeof(SList));
+        pM = (SList *)malloc(sizeof(SList));
         pM->age = data;
         pM->next = NULL;
 
@@ -88,7 +88,7 @@ int SList_NodeInsert(SList *pHead, int x, int y)
 
 
 
-int main()
+int mainb()
 {
 
     SList *pHead = Create_List();
