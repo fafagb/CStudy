@@ -41,9 +41,15 @@ SList *Create_List()
     return pHead;
 }
 
+
+
+
+
+
 int SList_Printf(SList *p)
 {
 
+    int  arr[4]={0,1,2,3};
     SList *pCurr = NULL;
 
     pCurr = p->next;
@@ -88,7 +94,7 @@ int SList_NodeInsert(SList *pHead, int x, int y)
 
 
 
-int mainb()
+int main10()
 {
 
     SList *pHead = Create_List();

@@ -12,22 +12,22 @@ void BBB(int **p)
     **p = 20;
 }
 
-// int main0()
-// {
+int main0()
+{
 
-//     int i = 0;
-//     int *p = NULL;
-//     p = &i;
-//     *p = 5;
-//     printf("i=%d\n", i);
+    int i = 0;
+    int *p = NULL;
+    p = &i;
+    *p = 5;
+    printf("i=%d\n", i);
 
-//     AAA(&i);
-//     printf("i=%d\n", i);
+    AAA(&i);
+    printf("i=%d\n", i);
 
-//     BBB(&p);
-//     printf("i=%d", i);
-//     return 0;
-// }
+    BBB(&p);
+    printf("i=%d", i);
+    return 0;
+}
 
 void CCC(char **p)
 {

@@ -71,7 +71,7 @@ void  PrintfLinkList(struct Women *p)
 };
 
 
-int main()
+int main11()
 {
    struct Women * p= CreateList();
     //PrintfLinkList(p);
