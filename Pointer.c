@@ -91,3 +91,45 @@ return 0;
 // return 0;
 
 // }
+
+
+//主调函数分配内存， 就是输入。
+
+          void func1(char *p) //p是主调函数分配好内存传入
+           {
+                  char buf[] = "1254566";
+                  strcpy(p, buf);
+            }
+
+        // 被调函数分配内存， 就是输出。
+
+           void func2(char **out)  //out是被掉函数分配好内存， 并修改内容后传出
+          {
+                 char *tmp = (char *)malloc(64);
+                 strcpy(tmp, "xxxxyyyy");
+                 *out = tmp;
+          }
+
+ 
+
+          // 测试程序
+
+         
+
+           void test()
+           {
+                      char *p = malloc(32);
+                      func1(p);
+                      printf("%s\n", p);
+                      char *p2 = NULL;
+                      func2(&p2);
+                      printf("%s\n", p2);
+
+                  
+
+                     free(p);
+                     free(p2);
+                     p = NULL;
+                     p2 = NULL;
+            }
+
