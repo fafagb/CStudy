@@ -31,6 +31,7 @@ struct Women * GetWomenNode(GBList *gbl){
 
 struct Women *CreateList()
 {
+    struct Women const *  ppp=NULL;
     struct Women w1,w2;
 
 

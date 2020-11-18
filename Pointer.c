@@ -93,6 +93,36 @@ return 0;
 // }
 
 
+
+
+//C语言中return返回值的机制为将返回值存入eax寄存器中，然后系统再将eax中的值赋给接收变量
+//在main()函数调用add()或者int_2_str()时，在main()函数的stack frame中会有一个位置用于存储add()或者int_2_str()的返回值。所以说，不管这是什么函数，我们一定会得到返回的值，只是对于int_2_str()来说，因为这个值是int_2_str()的stack中的地址，int_2_str()返回后这个地址的内容就无效了，因此这么做会有警告。
+int add(int a, int b) {
+  int c = a+b;
+  return c;
+}
+
+int mainyy(int argc, char ** argv) {
+  int a = add(1, 2);
+  printf("%d\n", a);
+  return 0;
+}
+
+
+char *int_2_str(int value) {
+  char buf[20];
+  sprintf(buf, "%d", value);
+  return buf;
+}
+
+int main(int argc, char ** argv) {
+  char *buf = int_2_str(1024);
+  printf("%s", buf);
+  return 0;
+}
+
+
+
 //主调函数分配内存， 就是输入。
 
           void func1(char *p) //p是主调函数分配好内存传入
