@@ -133,7 +133,7 @@ int main(int argc, char ** argv) {
 
         // 被调函数分配内存， 就是输出。
 
-           void func2(char **out)  //out是被掉函数分配好内存， 并修改内容后传出
+           void func2(char **out)  //out是被调函数分配好内存， 并修改内容后传出
           {
                  char *tmp = (char *)malloc(64);
                  strcpy(tmp, "xxxxyyyy");
