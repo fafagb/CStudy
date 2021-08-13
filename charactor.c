@@ -2,6 +2,20 @@
 
 int main()
 {
+#pragma region   字符数组和字符串常量（字符串常量是常量字符数组）
+char s1[] = "123";//s1[1],*(s1+1)  //pc1所指向的123分配在静态数据区的data段（数据内容不可修改）
+char s2[] = "123";
+char s3[] = "456";
+char *pc1 = "123";//pc1[1],*(pc1+1)  // 字符串数组123分配在栈上（数据内容可修改）
+// printf("s1=%d\n",&s1);
+// printf("s2=%d\n",&s2);
+// printf("s3=%d\n",&s3);
+// printf("pc1=%d\n",pc1);
+printf("s1[1]=%c\n",s1[1]);
+printf("*(s1+1)=%c\n",*(s1+1));
+printf("pc1[1]=%c\n",pc1[1]);
+printf("*(pc1+1)=%c\n",*(pc1+1));
+#pragma endregion
 
 #pragma region 字符
 // char  c="adsf"; //错误，char是字符类型
